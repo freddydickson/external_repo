@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\UserTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+
+        //trying to seed my UserTable using DBseeder
+        $this->call([
+            UserTableSeeder::class
+        ]);
     }
 }

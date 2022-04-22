@@ -27,7 +27,8 @@
             @enderror
         </div>
 
-        <div class="mb-4">
+
+        <div class="mb-3">
             <label for="name" class="sr-only">Password</label>
             <input type="password" name="password" id="password" placeholder="your password" class="bg-gray-100 border-2 w-full rounded-lg p-3 @error('password') border-red-500 @enderror" value="{{ old('password') }}" >
             @error('password')
@@ -36,6 +37,14 @@
                 </div>
                 
             @enderror
+        </div>
+
+        <div class="mb4">
+            <div class="flex items-center">
+                <input type="checkbox" name="remember" id="remember" class="mr-2">
+                <label for="remember" class="pt-2">Remember me</label>
+
+            </div>
         </div>
 
         

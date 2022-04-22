@@ -19,7 +19,7 @@
               <li><a href="{{ route('home') }}" class="p-3  font-bold">Home</a></li>
               @auth()
               <li><a href="{{ route('dashboard') }}" class="p-3  font-bold">Dashboard</a></li>
-              <li><a href="" class="p-3">Post</a></li>
+              <li><a href="{{ route('posts') }}" class="p-3">Post</a></li>
               @endauth()
               
           </ul>

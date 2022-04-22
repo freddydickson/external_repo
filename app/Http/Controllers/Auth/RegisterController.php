@@ -32,6 +32,7 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
        ]);
+       
 
        // Technically signed in a registered user..
        auth()->attempt($request->only('email', 'password'));

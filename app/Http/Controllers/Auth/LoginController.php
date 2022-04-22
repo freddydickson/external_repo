@@ -18,7 +18,7 @@ class LoginController extends Controller
         'password' => 'required',
        ]);
        // to check if user logged in with valid login details
-       if(!auth()->attempt($request->only('email', 'password'))){
+       if(!auth()->attempt($request->only('email', 'password'), $request->remember)){
            return back()->with('status', 'Invalid login details');
        }
        //when registered redirect user to dashboard
